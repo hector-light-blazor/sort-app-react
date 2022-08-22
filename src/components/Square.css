@@ -1,0 +1,13 @@
+.Square {
+    width: 200px;
+    height: 200px;
+    background: red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 8rem;
+    font-weight: bolder;
+    margin-left: 20px;
+  }

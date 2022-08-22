@@ -1,0 +1,16 @@
+.Play{
+    position: absolute;
+    top: 50px;
+    margin-left: -140px;
+    width: 280px;
+    height: 100px;
+    background-color: brown;
+    color: white;
+    font-size: 4rem;
+
+}
+
+.Play:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
