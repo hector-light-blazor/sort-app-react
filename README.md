@@ -1,3 +1,8 @@
+# Purpose
+The purpose is to demonstrate the skills with React Framework versio 18.
+Is a sample app that focuses on demonstrating sorting algorithms.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
