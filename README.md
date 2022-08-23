@@ -3,13 +3,8 @@ The purpose is to demonstrate the skills with React Framework versio 18.
 Is a sample app that focuses on demonstrating sorting algorithms.
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+# Gif Demonstration
+<img src="https://raw.githubusercontent.com/hector-light-blazor/sort-app-react/master/gif/presentation.gif" />
 
 ### `npm start`
 
