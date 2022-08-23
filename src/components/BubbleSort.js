@@ -16,10 +16,10 @@ function BubbleSort(props) {
     console.log("bubbleSortStep", state)
     let { array, swaps, comparisons, i, j, done, timer } = state;
     console.log(i);
+    array.forEach(element => {
+      element.active = false;
+    });
     if (i <= 0) {
-      array.forEach(element => {
-        element.active = false;
-      });
       console.log(array)
         return {
             array,
@@ -31,6 +31,8 @@ function BubbleSort(props) {
         };
     }
 
+    array[j].active = true;
+    array[j + 1].active = true;
 
     if (array[j].number > array[j + 1].number) {
         let temp = array[j];
@@ -39,7 +41,6 @@ function BubbleSort(props) {
         swaps++;
     }
 
-    array[j].active = false;
 
    
     if (++j >= i) {
@@ -73,10 +74,19 @@ const handleTimer = () => {
   });
 }
 
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
   const bubbleSortInit = (data) => {
     let array = [];
     for(var i = 0; i < data.length; i++) {
-      array.push({ id: i, number: data[i], active: (i == 0 || i == 1) ? true: false})
+      array.push({ id: i, number: data[i], color: getRandomColor(),active: (i == 0 || i == 1) ? true: false})
     }
 
     return {
@@ -96,7 +106,7 @@ const handleTimer = () => {
     //playdispatch({type: "start"})
     setState({
       ...bubbleSortInit(props.array),
-      timer: setInterval(() => handleTimer(), 250)
+      timer: setInterval(() => handleTimer(), 1200)
    }) 
    
    
@@ -114,7 +124,7 @@ const handleTimer = () => {
           <option>Bubble Sort</option>
         </select>
         <div className="ListContainer">
-          {state.array.map((data) => <Square key={data.id} active={data.active} number={data.number} />)} 
+          {state.array.map((data) => <Square key={data.id} color={data.color} active={data.active} number={data.number} />)} 
         </div>
     </div>
   );

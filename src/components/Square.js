@@ -6,7 +6,7 @@ function Square(props) {
     <div className="Square">
         {props.active &&
         
-            <Arrow />
+            <Arrow color={props.color} />
         }
         {props.number}
     </div>

@@ -120,7 +120,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <BubbleSort array={[20, 10, 5]} />
+       <BubbleSort array={[20, 10, 5, 2]} />
       </header>
     </div>
   );
