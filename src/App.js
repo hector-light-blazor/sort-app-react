@@ -1,8 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
 import BubbleSort from './components/BubbleSort'
-
-import { useState, useEffect, useReducer  } from "react"
 
 
 const Sort = (state, x, y) => {
